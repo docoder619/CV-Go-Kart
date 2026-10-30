@@ -1,0 +1,1 @@
+Day 1: Today I setup my software and repository. I will work on designing the pcb and cad models for the frame now
