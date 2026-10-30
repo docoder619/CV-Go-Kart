@@ -28,5 +28,27 @@ void setup() {
 }
 
 void loop() {
-  
+  digitalWrite(frontout, LOW);
+  digitalWrite(rightout, LOW);
+  digitalWrite(leftout, LOW);
+  digitalWrite(backout, LOW);
+  delay(2);
+
+  digitalWrite(rightout, HIGH);
+  delay(10);
+  digitalWrite(rightout, LOW);
+  duration = pulseIn(rightin, HIGH);
+  dr = duration * 0.034 / 2;
+
+  digitalWrite(leftout, HIGH);
+  delay(10);
+  digitalWrite(leftout, LOW);
+  duration = pulseIn(leftin, HIGH);
+  dl = duration * 0.034 / 2;
+
+  digitalWrite(backout, HIGH);
+  delay(10);
+  digitalWrite(backout, LOW);
+  duration = pulseIn(backin, HIGH);
+  db = duration * 0.034 / 2;
 }
